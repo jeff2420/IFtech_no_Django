@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFtech.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+   
+
+</head>
+<body>
+    <header class="header_principal custom-navbar-bg text-black d-flex align-items-center py-3">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-2 col-md-1">
+                    <a href="{% url 'CSL' %}">
+                        <img src="{% static 'img/seta.png' %}" alt="voltar" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-10 col-md-11 text-center">
+                    <h1 class="title mb-0 font-weight-bold">Cadastro de usuários</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question">Nome:</label>
+                        <input type="text" class="form-control" id="question" maxlength="100" placeholder="Nome aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="CPF">CPF:</label>
+                        <input required id="CPF" type="text" class="form-control text-dark" maxlength="11" placeholder="Insira o CPF">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question2">Função:</label>
+                        <input type="text" class="form-control" id="question2" placeholder="Função aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question3">Setor:</label>
+                        <input type="text" class="form-control" id="question3" placeholder="Setor aqui, ex: portaria, CSL">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question4">Senha:</label>
+                        <input type="text" class="form-control" id="question4" placeholder="Senha aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form class="row">
+
+                    <div class="col-12 font-weight-bold">
+                        <label for="question ">Usuário ativo?</label>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="yesno" id="yes" value="yes">
+                            <label class="form-check-label font-weight-bold" for="yes">
+                                Sim
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="yesno" id="no" value="no">
+                            <label class="form-check-label font-weight-bold" for="no">
+                                Não
+                            </label>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-10 text-center">
+                <button type="button" class="btn custom-navbar-bg-btn font-weight-bold" onclick="showConfirmation()">Salvar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Caixa de mensagem de confirmação -->
+    <div class="confirmation-message" id="confirmationMessage">
+        <p>Deseja salvar os dados?</p>
+        <div class="confirmation-buttons d-flex flex-row justify-content-between">
+            <button type="button" class="btn btn-success" onclick="saveData()">Sim</button>
+            <button type="button" class="btn btn-danger" onclick="hideConfirmation()">Não</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container mt-5"></div>
+    </footer>
+    
+
+    <div class="spacer"></div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar-bg fixed-bottom" style="overflow-x: auto;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center flex-nowrap" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 5px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/home.png' %}" alt="home" style="width: 55px; height: 55px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-right: 5px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/csl-icon.png' %}" alt="icon CSL" style="width: 60px; height: 55px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-right: 5px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/cadastrar veiculos.png' %}" alt="carro" style="width: 60px; height: 50px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                            <div style="margin-right: 5px;">
+                                <div style="background-color: white; border-radius: 50%; padding: 5px; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{% static 'img/cadastrar usuario.png' %}" alt="usuário" style="width: 50px;">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-right: 5px;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/autorização de veiculo.png' %}" alt="autorização" style="width: 80px; height: 70px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/registros.png' %}" alt="tabela" style="width: 60px; height: 70px; margin-right: 5px;">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('#CPF').mask('000.000.000-00', {reverse: true});
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+           // Função para exibir a mensagem de confirmação
+           function showConfirmation() {
+            document.getElementById("confirmationMessage").style.display = "block";
+        }
+
+        // Função para ocultar a mensagem de confirmação
+        function hideConfirmation() {
+            document.getElementById("confirmationMessage").style.display = "none";
+        }
+
+        // Função para salvar os dados
+        function saveData() {
+            alert("Dados salvos!");
+            hideConfirmation(); // Oculta a mensagem de confirmação após salvar os dados
+        }
+    </script>
+     <script>
+        // Função para verificar se a barra de navegação está visível
+    function isNavBarVisible() {
+        var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+        var rect = navBar.getBoundingClientRect();
+        return (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+    }
+
+    // Função para ajustar a posição do botão "Salvar"
+    function adjustSaveButtonPosition() {
+        var saveButton = document.querySelector('.custom-navbar-bg-btn');
+        var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+        
+        if (isNavBarVisible()) {
+            // Se a barra de navegação estiver visível, ajusta a margem superior do botão "Salvar"
+            var navBarHeight = navBar.offsetHeight;
+            saveButton.style.marginBottom = navBarHeight + 'px';
+        } else {
+            // Se a barra de navegação estiver oculta, mantém a margem inferior padrão
+            saveButton.style.marginBottom = '0';
+        }
+    }
+
+    // Evento de rolagem da janela
+    window.addEventListener('scroll', function() {
+        adjustSaveButtonPosition();
+    });
+
+    // Ajusta a posição inicial do botão "Salvar" ao carregar a página
+    window.addEventListener('load', function() {
+        adjustSaveButtonPosition();
+    });
+</script>
+<script>
+    function adjustSaveButtonPosition() {
+        var saveButton = document.querySelector('.custom-navbar-bg-btn');
+        var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+        
+        if (isNavBarVisible()) {
+            // Se a barra de navegação estiver visível, ajusta a margem inferior do botão "Salvar"
+            var navBarHeight = navBar.offsetHeight;
+            var spaceBetween = 50; // Espaço desejado entre o botão e a barra de navegação
+            saveButton.style.marginBottom = (navBarHeight + spaceBetween) + 'px';
+        } else {
+            // Se a barra de navegação estiver oculta, mantém a margem inferior padrão
+            saveButton.style.marginBottom = '0';
+        }
+    }
+</script>
+
+
+</body>
+</html>

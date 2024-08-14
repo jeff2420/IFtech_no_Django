@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFtech.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+
+
+
+<body>
+    <header class="header_principal custom-navbar-bg text-black py-4 text-center -bold">
+        <div class="container">
+            <h1 class="mb-0 font-weight-bold">IFtech</h1>
+        </div>
+    </header>
+    
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-10 col-lg-12 text-center">
+                <div class="mb-5">
+                    <a href=" {% url 'login-portaria' %} " class="btn btn-custom-navbar-bg custom-navbar-bg-btn d-flex justify-content-center align-items-center btn-block" style="width: 300px; height: 100px;">
+                        <img src="{% static 'img/portaria-icon.png'%}" alt="Ícone de Registrar Entrada/Saída" style="margin-right: 60px; width: 80px;">
+                        <span class="font-weight-bold" style="font-size: 30px;">Portaria</span>
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <a href=" {% url 'login-CSL' %} " class="btn btn-custom-navbar-bg custom-navbar-bg-btn d-flex justify-content-center align-items-center btn-block mb-3" style="width: 300px; height: 100px;">
+                        <img src="{% static 'img/csl-icon.png'%}" alt="Ícone de Registros Diários" style="margin-right: 80px; width: 60px;">
+                        <span class="font-weight-bold" style="font-size: 30px;">CSL</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

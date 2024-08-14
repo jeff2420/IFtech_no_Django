@@ -1,0 +1,1555 @@
+/*------------------------------------------------------------*/
+.custom-navbar-bg {
+    background-color: #90b7fe;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.custom-navbar-bg-btn {
+    background-color: #90b7fe !important;
+    color: black !important;
+    border-radius: 15px;
+    padding: 15px 20px;
+    border: 2px solid black !important;
+    box-shadow: 5px 5px 5px gray !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+  
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.custom-navbar-bg-btn_qr{
+    background-color: #90b7fe !important;
+    color: black !important;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: 1px solid black !important;
+    box-shadow: 5px 5px 5px gray !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.navbar-nav img {
+    width: 30px;
+}
+/*------------------------------------------------------------*/
+
+/* Responsividade para a barra de navegação */
+@media (min-width: 576px) {
+    .navbar-nav img {
+        width: 30px;
+    }
+}
+
+/*------------------------------------------------------------*/
+.dropdown-item {
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.dropdown-item:nth-child(odd) {
+    background-color: #d8d9db; /* Cor de fundo para linhas ímpares */
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.dropdown-item:hover,
+.dropdown-item.active {
+    background-color: #90b7fe; /* Cor de fundo quando hover ou ativo */
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+body {
+    max-height: 100vh; /* Altura máxima igual à altura da janela do navegador */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+ /* Alinha a mensagem de confirmação ao centro */
+ .confirmation-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.confirmation-message p {
+    margin-bottom: 10px;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.confirmation-buttons {
+    text-align: center;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.confirmation-buttons button {
+    margin: 0 10px;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.custom-navbar-bg.fixed-bottom {
+    z-index: 1000;
+}
+/*------------------------------------------------------------*/
+
+
+/* Responsividade para a barra de navegação */
+@media (max-width: 768px) {
+    .navbar-nav img {
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Alterando a direção para horizontal */
+        width: 100%;
+        padding: 10px; /* Adicionando preenchimento entre os botões */
+    }
+    .navbar-nav .nav-item {
+        margin-right: 5px;
+    }
+    .navbar-collapse {
+        display: flex !important; /* Forçando a exibição da barra de navegação */
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 20px; /* Adicionando margem superior */
+    }
+    .navbar-nav .nav-link img {
+        width: 25px; /* Reduzindo o tamanho das imagens */
+    }
+    /* Ocultando o botão de alternância para dispositivos móveis */
+    .navbar-toggler {
+            display: none;
+    }
+    .navbar.fixed-bottom {
+        position: fixed !important;
+        bottom: 0;
+        width: 100%;
+    }
+    .navbar.fixed-bottom .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar.fixed-bottom .navbar-nav {
+        flex-direction: row !important;
+        justify-content: space-between;
+    }
+    .navbar.fixed-bottom .navbar-nav .nav-item {
+        margin-right: 0 !important;
+    }
+}
+
+
+
+
+/* Exibindo a barra de navegação nos tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        display: flex !important;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+    }
+}
+
+
+/*------------------------------------------------------------*/
+.spacer {
+    height: 150px; /* Altura do espaçador */
+    }
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.spacer_1 {
+    height: 50px; /* Altura do espaçador */
+    }
+/*------------------------------------------------------------*/
+
+
+
+@media (max-width: 991px) {/* Dispositivos com largura máxima de 991 pixels */
+    .custom-dropdown-btn {
+        width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+        height: 60px; /* Altura reduzida para dispositivos móveis */
+        margin-left: 20px; /* Reduz a margem esquerda */
+        margin-right: 20px; /* Reduz a margem direita */
+        font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+        }
+    .font-weight-bold_1 {
+            font-size: 16px; /* Tamanho de fonte para desktop */
+            margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+        }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+    .container_1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+        width: auto; /* Largura automática */
+        height: auto; /* Altura automática */
+        box-sizing: border-box; /* Inclui padding e border na largura total */
+    }
+
+    .custom-dropdown-btn {
+        width: 700px; /* Largura fixa */
+        height: 80px; /* Altura reduzida para tablets */
+        font-size: 18px; /* Tamanho de fonte menor para tablets */
+        margin-top: 15px; /* Espaçamento acima do botão */
+        margin-bottom: 15px; /* Espaçamento abaixo do botão */
+    }
+
+    .font-weight-bold_1 {
+        font-size: 18px; /* Tamanho de fonte menor para tablets */
+        margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+    }
+}
+
+
+
+
+/* Estilos para dispositivos desktop */
+@media (min-width: 992px) {
+    /* Seletor para o container do dropdown */
+    .custom-dropdown-container {
+        width: 1110px; /* Define a largura automática para ajustar ao conteúdo */
+        height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+        position: absolute; /* Posicionamento absoluto para centralização */
+        left: 50%; /* Posiciona o container no meio da página horizontalmente */
+        top: 50%; /* Posiciona o container no meio da página verticalmente */
+        transform: translate(-50%, -50%); /* Move o container para o centro da página */
+        margin: 0; /* Remove margens */
+        padding: 0; /* Remove preenchimentos */
+    }
+
+    .font-weight-bold_1{
+        margin-right: 700px; 
+        font-size: 20px;
+    }
+    .btn-secondary{
+        font-size: 25px;
+    }
+    .container_1{
+        height: 100px;
+    }
+}
+
+
+/*------------------------------------------------------------*/
+.btn-content {
+    display: flex;
+    align-items: center;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.btn-content img {
+    margin-right: 10px;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+  /* Ajuste do tamanho do select e seta */
+  .custom-select {
+    width: 1000 px; /* Ajusta o tamanho para ocupar toda a largura */
+    padding-right: 10px; /* Adiciona espaço para a seta */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: #fff;
+    background-size: 12px 12px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+.custom-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+body, html {
+    height: 100%;
+}
+
+.custom-navbar-bg-btn img {
+    margin-right: 10px;
+}
+
+.header_principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #90b7fe;
+    color: black;
+    padding: 20px;
+}
+
+.header_principal img {
+    margin-right: 10px;
+}
+
+.navbar-nav img {
+    width: 40px;
+    height: auto;
+    margin-right: 20px; /* Reduzindo a margem para tamanhos menores */
+    margin-left: 20px; /* Reduzindo a margem para tamanhos menores */
+}
+
+/* Responsividade para a barra de navegação */
+@media (max-width: 768px) {
+    .navbar-nav img {
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Alterando a direção para horizontal */
+        width: 100%;
+        padding: 10px; /* Adicionando preenchimento entre os botões */
+    }
+    .navbar-nav .nav-item {
+        margin-right: 5px;
+    }
+    .navbar-collapse {
+        display: flex !important; /* Forçando a exibição da barra de navegação */
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 20px; /* Adicionando margem superior */
+    }
+    .navbar-nav .nav-link img {
+        width: 25px; /* Reduzindo o tamanho das imagens */
+    }
+    /* Ocultando o botão de alternância para dispositivos móveis */
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar.fixed-bottom {
+        position: fixed !important;
+        bottom: 0;
+        width: 100%;
+    }
+    .navbar.fixed-bottom .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar.fixed-bottom .navbar-nav {
+        flex-direction: row !important;
+        justify-content: space-between;
+    }
+    .navbar.fixed-bottom .navbar-nav .nav-item {
+        margin-right: 0 !important;
+    }
+}
+
+
+/* Exibindo a barra de navegação nos tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        display: flex !important;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+    }
+}
+
+      
+.custom-navbar-bg-btn {
+    background-color: #90b7fe !important;
+    color: black !important;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 1px solid black !important;
+    box-shadow: 5px 5px 5px gray !important;
+    }
+
+
+    /* Responsividade para a barra de navegação */
+    @media (min-width: 576px) {
+        .navbar-nav img {
+            width: 40px;
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: lightgray;
+    }
+
+    tr:nth-child(odd) {
+        background-color: white;
+        
+    }
+
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    th, td {
+        border-top: 1px solid black; 
+        border-bottom: 1px solid black; 
+        
+    }
+
+    tr:nth-child(n+3):nth-last-child(n+3) td {
+        border-top: 3px solid black; 
+        border-bottom: 3px solid black;
+        font-size: 15px; 
+    }
+
+    th:first-child, td:first-child {
+        border-left: 3px solid black; 
+        font-size: 15px;
+    }
+
+    th:last-child, td:last-child {
+        border-right: 3px solid black; 
+        
+    }
+    
+
+     /* Responsividade para a barra de navegação */
+     @media (max-width: 768px) {
+        .navbar-nav img {
+            width: 30px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Alterando a direção para horizontal */
+            width: 100%;
+            padding: 10px; /* Adicionando preenchimento entre os botões */
+        }
+        .navbar-nav .nav-item {
+            margin-right: 5px;
+        }
+        .navbar-collapse {
+            display: flex !important; /* Forçando a exibição da barra de navegação */
+            flex-basis: 100%;
+            justify-content: center;
+            margin-top: 20px; /* Adicionando margem superior */
+        }
+        .navbar-nav .nav-link img {
+            width: 25px; /* Reduzindo o tamanho das imagens */
+        }
+        /* Ocultando o botão de alternância para dispositivos móveis */
+        .navbar-toggler {
+                display: none;
+        }
+        .navbar.fixed-bottom {
+            position: fixed !important;
+            bottom: 0;
+            width: 100%;
+        }
+        .navbar.fixed-bottom .container-fluid {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .navbar.fixed-bottom .navbar-nav {
+            flex-direction: row !important;
+            justify-content: space-between;
+        }
+        .navbar.fixed-bottom .navbar-nav .nav-item {
+            margin-right: 0 !important;
+        }
+    }
+
+
+    /* Exibindo a barra de navegação nos tablets */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .navbar {
+            display: flex !important;
+        }
+        .navbar-collapse {
+            display: flex !important;
+            justify-content: center;
+        }
+        .navbar-nav {
+            flex-direction: row !important;
+        }
+    }
+  
+
+        @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+            .custom-dropdown-btn {
+                width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                height: 60px; /* Altura reduzida para dispositivos móveis */
+                margin-left: 20px; /* Reduz a margem esquerda */
+                margin-right: 20px; /* Reduz a margem direita */
+                font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                }
+            .font-weight-bold_1 {
+                    font-size: 16px; /* Tamanho de fonte para desktop */
+                    margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+                }
+
+        }
+
+
+
+        @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+            .container_1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                width: auto; /* Largura automática */
+                height: auto; /* Altura automática */
+                box-sizing: border-box; /* Inclui padding e border na largura total */
+            }
+        
+            .custom-dropdown-btn {
+                width: 700px; /* Largura fixa */
+                height: 80px; /* Altura reduzida para tablets */
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-top: 15px; /* Espaçamento acima do botão */
+                margin-bottom: 15px; /* Espaçamento abaixo do botão */
+            }
+        
+            .font-weight-bold_1 {
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+            }
+        }
+
+        /* Estilos para dispositivos desktop */
+        @media (min-width: 992px) {
+            /* Seletor para o container do dropdown */
+            .custom-dropdown-container {
+                width: 500px; /* Definir largura máxima */
+                height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                top: 10px; /* Posiciona o container abaixo da barra de navegação, ajuste conforme necessário */
+                right: 310px; /* Posiciona o container no lado direito da tela */
+                z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+            }
+        
+            .font-weight-bold_1 {
+                margin-right: 200px; /* Reduzir a margem direita */
+                font-size: 20px;
+            }
+        
+            .btn-secondary {
+                font-size: 25px;
+            }
+        
+            .container_1 {
+                height: 100px;
+            }
+        }
+                
+        /* Responsividade para a barra de navegação */
+        @media (min-width: 576px) {
+            .navbar-nav img {
+                width: 40px;
+            }
+        }
+
+        /* Removendo bordas arredondadas do cabeçalho */
+        .header.custom-navbar-bg {
+            border-radius: 0;
+        }
+
+       
+         /* Responsividade para a barra de navegação */
+         @media (max-width: 768px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row; /* Alterando a direção para horizontal */
+                width: 100%;
+                padding: 10px; /* Adicionando preenchimento entre os botões */
+            }
+            .navbar-nav .nav-item {
+                margin-right: 5px;
+            }
+            .navbar-collapse {
+                display: flex !important; /* Forçando a exibição da barra de navegação */
+                flex-basis: 100%;
+                justify-content: center;
+                margin-top: 20px; /* Adicionando margem superior */
+            }
+            .navbar-nav .nav-link img {
+                width: 25px; /* Reduzindo o tamanho das imagens */
+            }
+            /* Ocultando o botão de alternância para dispositivos móveis */
+            .navbar-toggler {
+                    display: none;
+            }
+            .navbar.fixed-bottom {
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+            .navbar.fixed-bottom .container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .navbar.fixed-bottom .navbar-nav {
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
+            .navbar.fixed-bottom .navbar-nav .nav-item {
+                margin-right: 0 !important;
+            }
+        }
+
+        /* Removendo bordas arredondadas do cabeçalho */
+        .header.custom-navbar-bg {
+            border-radius: 0;
+        }
+
+        /* Exibindo a barra de navegação nos tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navbar {
+                display: flex !important;
+            }
+            .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+            }
+            .navbar-nav {
+                flex-direction: row !important;
+            }
+        }
+       
+            @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+                .custom-dropdown-btn {
+                    width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                    height: 60px; /* Altura reduzida para dispositivos móveis */
+                    margin-left: 20px; /* Reduz a margem esquerda */
+                    margin-right: 20px; /* Reduz a margem direita */
+                    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                    }
+                .font-weight-bold_1 {
+                        font-size: 16px; /* Tamanho de fonte para desktop */
+                        margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+                    }
+    
+            }
+    
+    
+    
+            @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+                .container_1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                    width: auto; /* Largura automática */
+                    height: auto; /* Altura automática */
+                    box-sizing: border-box; /* Inclui padding e border na largura total */
+                }
+            
+                .custom-dropdown-btn {
+                    width: 700px; /* Largura fixa */
+                    height: 80px; /* Altura reduzida para tablets */
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-top: 15px; /* Espaçamento acima do botão */
+                    margin-bottom: 15px; /* Espaçamento abaixo do botão */
+                }
+            
+                .font-weight-bold_1 {
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+                }
+            }
+    
+            /* Estilos para dispositivos desktop */
+            @media (min-width: 992px) {
+                /* Seletor para o container do dropdown */
+                .custom-dropdown-container {
+                    width: 500px; /* Definir largura máxima */
+                    height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                    top: 10px; /* Posiciona o container abaixo da barra de navegação, ajuste conforme necessário */
+                    right: 310px; /* Posiciona o container no lado direito da tela */
+                    z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+                }
+            
+                .font-weight-bold_1 {
+                    margin-right: 200px; /* Reduzir a margem direita */
+                    font-size: 20px;
+                }
+            
+                .btn-secondary {
+                    font-size: 25px;
+                }
+            
+                .container_1 {
+                    height: 100px;
+                }
+            }
+    
+            /* Responsividade para a barra de navegação */
+            @media (min-width: 576px) {
+                .navbar-nav img {
+                    width: 40px;
+                }
+            }
+     
+            
+            /* Responsividade para a barra de navegação */
+            @media (max-width: 768px) {
+                .navbar-nav img {
+                    width: 30px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+                .navbar-nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row; /* Alterando a direção para horizontal */
+                    width: 100%;
+                    padding: 10px; /* Adicionando preenchimento entre os botões */
+                }
+                .navbar-nav .nav-item {
+                    margin-right: 5px;
+                }
+                .navbar-collapse {
+                    display: flex !important; /* Forçando a exibição da barra de navegação */
+                    flex-basis: 100%;
+                    justify-content: center;
+                    margin-top: 20px; /* Adicionando margem superior */
+                }
+                .navbar-nav .nav-link img {
+                    width: 25px; /* Reduzindo o tamanho das imagens */
+                }
+                /* Ocultando o botão de alternância para dispositivos móveis */
+                .navbar-toggler {
+                        display: none;
+                }
+                .navbar.fixed-bottom {
+                    position: fixed !important;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .navbar.fixed-bottom .container-fluid {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .navbar.fixed-bottom .navbar-nav {
+                    flex-direction: row !important;
+                    justify-content: space-between;
+                }
+                .navbar.fixed-bottom .navbar-nav .nav-item {
+                    margin-right: 0 !important;
+                }
+            }
+       
+            /* Exibindo a barra de navegação nos tablets */
+            @media (min-width: 768px) and (max-width: 1024px) {
+                .navbar {
+                    display: flex !important;
+                }
+                .navbar-collapse {
+                    display: flex !important;
+                    justify-content: center;
+                }
+                .navbar-nav {
+                    flex-direction: row !important;
+                }
+            }
+            @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+                .custom-dropdown-btn {
+                    width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                    height: 60px; /* Altura reduzida para dispositivos móveis */
+                    margin-left: 20px; /* Reduz a margem esquerda */
+                    margin-right: 20px; /* Reduz a margem direita */
+                    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                    }
+                .font-weight-bold_1 {
+                        font-size: 16px; /* Tamanho de fonte para desktop */
+                        margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+                    }
+    
+            }
+    
+            @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+                .container_1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                    width: auto; /* Largura automática */
+                    height: auto; /* Altura automática */
+                    box-sizing: border-box; /* Inclui padding e border na largura total */
+                }
+            
+                .custom-dropdown-btn {
+                    width: 700px; /* Largura fixa */
+                    height: 80px; /* Altura reduzida para tablets */
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-top: 15px; /* Espaçamento acima do botão */
+                    margin-bottom: 15px; /* Espaçamento abaixo do botão */
+                }
+            
+                .font-weight-bold_1 {
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+                }
+            }
+    
+            /* Estilos para dispositivos desktop */
+            @media (min-width: 992px) {
+                /* Seletor para o container do dropdown */
+                .custom-dropdown-container {
+                    width: 1110px; /* Define a largura automática para ajustar ao conteúdo */
+                    height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                    position: absolute; /* Posicionamento absoluto para centralização */
+                    left: 50%; /* Posiciona o container no meio da página horizontalmente */
+                    top: 50%; /* Posiciona o container no meio da página verticalmente */
+                    transform: translate(-50%, -50%); /* Move o container para o centro da página */
+                    margin: 0; /* Remove margens */
+                    padding: 0; /* Remove preenchimentos */
+                    z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+                }
+        
+                /* Estilos para o dropdown-menu */
+                .dropdown-menu {
+                    z-index: 999; /* Um valor alto para garantir que o dropdown fique acima de outros elementos */
+                }
+        
+                .font-weight-bold_1 {
+                    margin-right: 700px;
+                    font-size: 25px;
+                }
+        
+                .btn-secondary {
+                    font-size: 30px;
+                }
+        
+                .container_1 {
+                    height: 100px;
+                }
+            }
+            
+            
+            .navbar-height {
+                height: 80px;
+            }
+            
+    
+            /* Responsividade para a barra de navegação */
+            @media (min-width: 576px) {
+                .navbar-nav img {
+                    width: 40px;
+                }
+            }
+    
+            /* Removendo bordas arredondadas do cabeçalho */
+            .header.custom-navbar-bg {
+                border-radius: 0;
+            }
+    
+             /* Adiciona espaço ao redor da seta */
+            .dropdown-toggle::after {
+                margin-left: 0.3em; /* Ajuste conforme necessário */
+            }
+       
+          
+    
+            /* Responsividade para a barra de navegação */
+            @media (max-width: 768px) {
+                .navbar-nav img {
+                    width: 30px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+                .navbar-nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row; /* Alterando a direção para horizontal */
+                    width: 100%;
+                    padding: 10px; /* Adicionando preenchimento entre os botões */
+                }
+                .navbar-nav .nav-item {
+                    margin-right: 5px;
+                }
+                .navbar-collapse {
+                    display: flex !important; /* Forçando a exibição da barra de navegação */
+                    flex-basis: 100%;
+                    justify-content: center;
+                    margin-top: 20px; /* Adicionando margem superior */
+                }
+                .navbar-nav .nav-link img {
+                    width: 25px; /* Reduzindo o tamanho das imagens */
+                }
+                /* Ocultando o botão de alternância para dispositivos móveis */
+                .navbar-toggler {
+                        display: none;
+                }
+                .navbar.fixed-bottom {
+                    position: fixed !important;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .navbar.fixed-bottom .container-fluid {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .navbar.fixed-bottom .navbar-nav {
+                    flex-direction: row !important;
+                    justify-content: space-between;
+                }
+                .navbar.fixed-bottom .navbar-nav .nav-item {
+                    margin-right: 0 !important;
+                }
+            }
+    
+            /* Removendo bordas arredondadas do cabeçalho */
+            .header.custom-navbar-bg {
+                border-radius: 0;
+            }
+    
+            /* Exibindo a barra de navegação nos tablets */
+            @media (min-width: 768px) and (max-width: 1024px) {
+                .navbar {
+                    display: flex !important;
+                }
+                .navbar-collapse {
+                    display: flex !important;
+                    justify-content: center;
+                }
+                .navbar-nav {
+                    flex-direction: row !important;
+                }
+            }
+    
+            @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+                .custom-dropdown-btn {
+                    width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                    height: 60px; /* Altura reduzida para dispositivos móveis */
+                    margin-left: 20px; /* Reduz a margem esquerda */
+                    margin-right: 20px; /* Reduz a margem direita */
+                    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                    }
+                .font-weight-bold_1 {
+                        font-size: 16px; /* Tamanho de fonte para desktop */
+                        margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+                    }
+    
+            }
+    
+            @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+                .container_1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                    width: auto; /* Largura automática */
+                    height: auto; /* Altura automática */
+                    box-sizing: border-box; /* Inclui padding e border na largura total */
+                }
+            
+                .custom-dropdown-btn {
+                    width: 700px; /* Largura fixa */
+                    height: 80px; /* Altura reduzida para tablets */
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-top: 15px; /* Espaçamento acima do botão */
+                    margin-bottom: 15px; /* Espaçamento abaixo do botão */
+                }
+            
+                .font-weight-bold_1 {
+                    font-size: 18px; /* Tamanho de fonte menor para tablets */
+                    margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+                }
+            }
+    
+            /* Estilos para dispositivos desktop */
+            @media (min-width: 992px) {
+                /* Seletor para o container do dropdown */
+                .custom-dropdown-container {
+                    width: 1110px; /* Define a largura automática para ajustar ao conteúdo */
+                    height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                    position: absolute; /* Posicionamento absoluto para centralização */
+                    left: 50%; /* Posiciona o container no meio da página horizontalmente */
+                    top: 50%; /* Posiciona o container no meio da página verticalmente */
+                    transform: translate(-50%, -50%); /* Move o container para o centro da página */
+                    margin: 0; /* Remove margens */
+                    padding: 0; /* Remove preenchimentos */
+                    z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+                }
+        
+                /* Estilos para o dropdown-menu */
+                .dropdown-menu {
+                    z-index: 999; /* Um valor alto para garantir que o dropdown fique acima de outros elementos */
+                }
+        
+                .font-weight-bold_1 {
+                    margin-right: 700px;
+                    font-size: 25px;
+                }
+        
+                .btn-secondary {
+                    font-size: 30px;
+                }
+        
+                .container_1 {
+                    height: 100px;
+                }
+            }
+  
+  
+  .navbar-nav {
+              margin: auto; 
+          }
+  .navbar-nav img {
+              width: 40px; 
+              height: auto; 
+              margin-right: 50px; 
+              margin-left: 50px;
+          }
+  /* Responsividade para a barra de navegação */
+  @media (max-width: 576px) {
+      .navbar-nav img {
+          width: 30px;
+          margin-right: 10px;
+          margin-left: 10px;
+      }
+  }
+  
+  .header_principal {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #90b7fe;
+          color: black;
+          padding: 20px;
+      }
+  
+          /* Responsividade para a barra de navegação */
+          @media (max-width: 768px) {
+              .navbar-nav img {
+                  width: 30px;
+                  margin-right: 5px;
+                  margin-left: 5px;
+              }
+              .navbar-nav {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: row; /* Alterando a direção para horizontal */
+                  width: 100%;
+                  padding: 10px; /* Adicionando preenchimento entre os botões */
+              }
+              .navbar-nav .nav-item {
+                  margin-right: 5px;
+              }
+              .navbar-collapse {
+                  display: flex !important; /* Forçando a exibição da barra de navegação */
+                  flex-basis: 100%;
+                  justify-content: center;
+                  margin-top: 20px; /* Adicionando margem superior */
+              }
+              .navbar-nav .nav-link img {
+                  width: 25px; /* Reduzindo o tamanho das imagens */
+              }
+              /* Ocultando o botão de alternância para dispositivos móveis */
+              .navbar-toggler {
+                      display: none;
+              }
+              .navbar.fixed-bottom {
+                  position: fixed !important;
+                  bottom: 0;
+                  width: 100%;
+              }
+              .navbar.fixed-bottom .container-fluid {
+                  padding-right: 0;
+                  padding-left: 0;
+              }
+              .navbar.fixed-bottom .navbar-nav {
+                  flex-direction: row !important;
+                  justify-content: space-between;
+              }
+              .navbar.fixed-bottom .navbar-nav .nav-item {
+                  margin-right: 0 !important;
+              }
+          }
+  
+  
+          /* Exibindo a barra de navegação nos tablets */
+          @media (min-width: 768px) and (max-width: 1024px) {
+              .navbar {
+                  display: flex !important;
+              }
+              .navbar-collapse {
+                  display: flex !important;
+                  justify-content: center;
+              }
+              .navbar-nav {
+                  flex-direction: row !important;
+              }
+          }
+        
+        .navbar-height {
+            height: 100px;
+        }
+        
+        .navbar-nav img {
+            width: 40px;
+            height: auto;
+            margin-right: 20px; /* Reduzindo a margem para tamanhos menores */
+            margin-left: 20px; /* Reduzindo a margem para tamanhos menores */
+        }
+
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 576px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+
+         /* Adiciona espaço ao redor da seta */
+        .dropdown-toggle::after {
+            margin-left: 0.3em; /* Ajuste conforme necessário */
+        }
+
+        /* Aumenta o tamanho da seta */
+        .dropdown-toggle::after {
+            transform: scale(1); /* Ajuste conforme necessário */
+            
+        }
+
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 768px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row; /* Alterando a direção para horizontal */
+                width: 100%;
+                padding: 10px; /* Adicionando preenchimento entre os botões */
+            }
+            .navbar-nav .nav-item {
+                margin-right: 5px;
+            }
+            .navbar-collapse {
+                display: flex !important; /* Forçando a exibição da barra de navegação */
+                flex-basis: 100%;
+                justify-content: center;
+                margin-top: 20px; /* Adicionando margem superior */
+            }
+            .navbar-nav .nav-link img {
+                width: 25px; /* Reduzindo o tamanho das imagens */
+            }
+            /* Ocultando o botão de alternância para dispositivos móveis */
+            .navbar-toggler {
+                    display: none;
+            }
+            .navbar.fixed-bottom {
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+            .navbar.fixed-bottom .container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .navbar.fixed-bottom .navbar-nav {
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
+            .navbar.fixed-bottom .navbar-nav .nav-item {
+                margin-right: 0 !important;
+            }
+        }
+
+        /* Removendo bordas arredondadas do cabeçalho */
+        .header.custom-navbar-bg {
+            border-radius: 0;
+        }
+
+        /* Exibindo a barra de navegação nos tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navbar {
+                display: flex !important;
+            }
+            .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+            }
+            .navbar-nav {
+                flex-direction: row !important;
+            }
+        }
+
+        @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+            .custom-dropdown-btn {
+                width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                height: 60px; /* Altura reduzida para dispositivos móveis */
+                margin-left: 20px; /* Reduz a margem esquerda */
+                margin-right: 20px; /* Reduz a margem direita */
+                font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                }
+            .font-weight-bold_1 {
+                    font-size: 16px; /* Tamanho de fonte para desktop */
+                    margin-right: 60px; /* Espaçamento à direita entre o texto e o botão */
+                }
+
+        }
+
+
+
+        @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+            .container_1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                width: auto; /* Largura automática */
+                height: auto; /* Altura automática */
+                box-sizing: border-box; /* Inclui padding e border na largura total */
+            }
+        
+            .custom-dropdown-btn {
+                width: 700px; /* Largura fixa */
+                height: 80px; /* Altura reduzida para tablets */
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-top: 15px; /* Espaçamento acima do botão */
+                margin-bottom: 15px; /* Espaçamento abaixo do botão */
+            }
+        
+            .font-weight-bold_1 {
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-right: 400px; /* Espaçamento à direita entre o texto e o botão */
+            }
+        }
+
+        /* Estilos para dispositivos desktop */
+        @media (min-width: 992px) {
+            /* Seletor para o container do dropdown */
+            .custom-dropdown-container {
+                width: 1110px; /* Define a largura automática para ajustar ao conteúdo */
+                height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                position: absolute; /* Posicionamento absoluto para centralização */
+                left: 50%; /* Posiciona o container no meio da página horizontalmente */
+                top: 50%; /* Posiciona o container no meio da página verticalmente */
+                transform: translate(-50%, -50%); /* Move o container para o centro da página */
+                margin: 0; /* Remove margens */
+                padding: 0; /* Remove preenchimentos */
+                z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+            }
+    
+            /* Estilos para o dropdown-menu */
+            .dropdown-menu {
+                z-index: 999; /* Um valor alto para garantir que o dropdown fique acima de outros elementos */
+            }
+    
+            .font-weight-bold_1 {
+                margin-right: 700px;
+                font-size: 25px;
+            }
+    
+            .btn-secondary {
+                font-size: 30px;
+            }
+    
+            .container_1 {
+                height: 100px;
+            }
+        }
+        
+        .navbar-nav img {
+            width: 40px;
+            height: auto;
+            margin-right: 20px; /* Reduzindo a margem para tamanhos menores */
+            margin-left: 20px; /* Reduzindo a margem para tamanhos menores */
+        }
+
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 576px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+
+        /* Removendo bordas arredondadas do cabeçalho */
+        .header.custom-navbar-bg {
+            border-radius: 0;
+        }
+        
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 768px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row; /* Alterando a direção para horizontal */
+                width: 100%;
+                padding: 10px; /* Adicionando preenchimento entre os botões */
+            }
+            .navbar-nav .nav-item {
+                margin-right: 5px;
+            }
+            .navbar-collapse {
+                display: flex !important; /* Forçando a exibição da barra de navegação */
+                flex-basis: 100%;
+                justify-content: center;
+                margin-top: 20px; /* Adicionando margem superior */
+            }
+            .navbar-nav .nav-link img {
+                width: 25px; /* Reduzindo o tamanho das imagens */
+            }
+            /* Ocultando o botão de alternância para dispositivos móveis */
+            .navbar-toggler {
+                    display: none;
+            }
+            .navbar.fixed-bottom {
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+            .navbar.fixed-bottom .container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .navbar.fixed-bottom .navbar-nav {
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
+            .navbar.fixed-bottom .navbar-nav .nav-item {
+                margin-right: 0 !important;
+            }
+        }
+
+        /* Removendo bordas arredondadas do cabeçalho */
+        .header.custom-navbar-bg {
+            border-radius: 0;
+        }
+
+        /* Exibindo a barra de navegação nos tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navbar {
+                display: flex !important;
+            }
+            .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+            }
+            .navbar-nav {
+                flex-direction: row !important;
+            }
+        }
+    
+        .navbar-height {
+            height: 80px;
+        }
+        
+        .navbar-nav img {
+            width: 40px;
+            height: auto;
+            margin-right: 20px; /* Reduzindo a margem para tamanhos menores */
+            margin-left: 20px; /* Reduzindo a margem para tamanhos menores */
+        }
+
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 576px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+       
+        /* Responsividade para a barra de navegação */
+        @media (max-width: 768px) {
+            .navbar-nav img {
+                width: 30px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row; /* Alterando a direção para horizontal */
+                width: 100%;
+                padding: 10px; /* Adicionando preenchimento entre os botões */
+            }
+            .navbar-nav .nav-item {
+                margin-right: 5px;
+            }
+            .navbar-collapse {
+                display: flex !important; /* Forçando a exibição da barra de navegação */
+                flex-basis: 100%;
+                justify-content: center;
+                margin-top: 20px; /* Adicionando margem superior */
+            }
+            .navbar-nav .nav-link img {
+                width: 25px; /* Reduzindo o tamanho das imagens */
+            }
+            /* Ocultando o botão de alternância para dispositivos móveis */
+            .navbar-toggler {
+                    display: none;
+            }
+            .navbar.fixed-bottom {
+                position: fixed !important;
+                bottom: 0;
+                width: 100%;
+            }
+            .navbar.fixed-bottom .container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .navbar.fixed-bottom .navbar-nav {
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
+            .navbar.fixed-bottom .navbar-nav .nav-item {
+                margin-right: 0 !important;
+            }
+        }
+
+
+        /* Exibindo a barra de navegação nos tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navbar {
+                display: flex !important;
+            }
+            .navbar-collapse {
+                display: flex !important;
+                justify-content: center;
+            }
+            .navbar-nav {
+                flex-direction: row !important;
+            }
+        }
+      
+        @media (max-width: 991px) { /* Dispositivos com largura máxima de 991 pixels */
+            .custom-dropdown-btn {
+                width: 800px; /* Define a largura para preencher a largura do contêiner pai */
+                height: 60px; /* Altura reduzida para dispositivos móveis */
+                margin-left: 20px; /* Reduz a margem esquerda */
+                margin-right: 20px; /* Reduz a margem direita */
+                font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+                }
+            .font-weight-bold_1 {
+                    font-size: 16px; 
+                    margin-right: 100px; /* Espaçamento à direita entre o texto e o botão */
+                }
+
+        }
+
+
+
+        @media (min-width: 768px) and (max-width: 991px) { /* Tablets (768px - 991px) */
+            .container_1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 0; /* Espaçamento acima e abaixo dentro do container */
+                width: auto; /* Largura automática */
+                height: auto; /* Altura automática */
+                box-sizing: border-box; /* Inclui padding e border na largura total */
+            }
+        
+            .custom-dropdown-btn {
+                width: 700px; /* Largura fixa */
+                height: 80px; /* Altura reduzida para tablets */
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-top: 15px; /* Espaçamento acima do botão */
+                margin-bottom: 15px; /* Espaçamento abaixo do botão */
+            }
+        
+            .font-weight-bold_1 {
+                font-size: 18px; /* Tamanho de fonte menor para tablets */
+                margin-right: 450px; /* Espaçamento à direita entre o texto e o botão */
+            }
+        }
+
+        /* Estilos para dispositivos desktop */
+        @media (min-width: 992px) {
+            /* Seletor para o container do dropdown */
+            .custom-dropdown-container {
+                width: 1110px; /* Define a largura automática para ajustar ao conteúdo */
+                height: 100px !important; /* Adicione uma altura específica, importante para priorizar */
+                position: absolute; /* Posicionamento absoluto para centralização */
+                left: 50%; /* Posiciona o container no meio da página horizontalmente */
+                top: 50%; /* Posiciona o container no meio da página verticalmente */
+                transform: translate(-50%, -50%); /* Move o container para o centro da página */
+                margin: 0; /* Remove margens */
+                padding: 0; /* Remove preenchimentos */
+                z-index: 999; /* Garante que o dropdown fique sobreposto a outros elementos */
+            }
+    
+            /* Estilos para o dropdown-menu */
+            .dropdown-menu {
+                z-index: 999; /* Um valor alto para garantir que o dropdown fique acima de outros elementos */
+            }
+    
+            .font-weight-bold_1 {
+                margin-right: 700px;
+                font-size: 25px;
+            }
+    
+            .btn-secondary {
+                font-size: 30px;
+            }
+    
+            .container_1 {
+                height: 100px;
+            }
+        }
+
+        .custom-navbar-bg-btn-2 {
+            background-color: #90b7fe !important;
+            color: black !important;
+            border-radius: 10px;
+            padding: 5px 20px;
+            border: 1px solid black !important;
+            box-shadow: 5px 5px 5px gray !important;
+        }

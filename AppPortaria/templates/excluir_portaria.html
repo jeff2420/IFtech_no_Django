@@ -1,0 +1,341 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFtech</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+
+
+<body>
+
+
+    <header class="header_principal custom-navbar-bg text-black d-flex align-items-center py-3">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-2 col-md-1">
+                    <a href=" {% url 'registros-portaria' %} ">
+                        <img src="{% static 'img/seta.png'%}" alt="voltar" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-10 col-md-11 text-center">
+                    <h1 class="title mb-0 font-weight-bold">Registros diários</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container_1-fluid mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8"> 
+                <div class="dropdown custom-dropdown-container d-flex align-items-center justify-content-center"> 
+                    <button class="btn btn-secondary dropdown-toggle btn-block custom-dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white; color: black;  ">
+                        <span id="dropdownText" class="font-weight-bold_1">Movimento</span> 
+                    </button>
+                    
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2" style="width: 200px;">  
+                        <button class="dropdown-item" type="button" onclick="changeDropdownText('Entrada')" style="font-weight:bold; font-size:20px;">Entrada</button>
+                        <button class="dropdown-item" type="button" onclick="changeDropdownText('Saída')" style="font-weight:bold; font-size:20px;">Saída</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form class="row">
+
+                    <div class="col-12 font-weight-bold">
+                        <label for="question ">Veículo Institucional?</label>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="yesno" id="yes" value="yes">
+                            <label class="form-check-label font-weight-bold" for="yes">
+                                Sim
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="yesno" id="no" value="no">
+                            <label class="form-check-label font-weight-bold" for="no">
+                                Não
+                            </label>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question">Placa:</label>
+                        <input type="text" class="form-control" id="question" placeholder="Placa aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question1">Nome do condutor:</label>
+                        <input required id="question1" type="text" class="form-control text-dark" placeholder="Nome aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question2">Cor do veículo:</label>
+                        <input type="text" class="form-control" id="question2" placeholder="Cor aqui">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question3">Tipo do veículo:</label>
+                        <input type="text" class="form-control" id="question3" placeholder=" Tipo aqui, ex: carro, moto, ônibus etc">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card border border-black border-dark">
+            <div class="card-body">
+                <form>
+                    <div class="form-group font-weight-bold">
+                        <label for="question4">Modelo do veículo:</label>
+                        <input type="text" class="form-control" id="question4" placeholder="Modelo aqui">    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-between">
+            <div class="col-md-2 col-sm-6 text-center text-sm-right mb-3">
+                <!-- Imagem como botão para acionar a confirmação de exclusão -->
+                <button type="button" class="btn" onclick="showDeleteConfirmation()">
+                    <img src="{% static 'img/excluir.png'%}" alt="Excluir" style="width: 80px; height: 70px;"><br>
+                    <div style="font-size: 25px; font-weight: bold;">
+                        Excluir
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center text-sm-left">
+                <!-- Botão para acionar a confirmação de salvar -->
+                <button type="button" class="btn custom-navbar-bg-btn font-weight-bold" onclick="showSaveConfirmation()">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="confirmation-message" id="deleteConfirmationMessage" style="display: none;">
+        <p>Deseja excluir os dados?</p>
+        <div class="confirmation-buttons d-flex flex-row justify-content-between">
+            <!-- Botão 'Sim' para excluir dados -->
+            <button type="button" class="btn btn-success" onclick="deleteData()">Sim</button>
+            <!-- Botão 'Não' para cancelar -->
+            <button type="button" class="btn btn-danger" onclick="hideDeleteConfirmation()">Não</button>
+        </div>
+    </div>
+    
+    <div class="confirmation-message" id="saveConfirmationMessage" style="display: none;">
+        <p>Deseja salvar os dados?</p>
+        <div class="confirmation-buttons d-flex flex-row justify-content-between">
+            <!-- Botão 'Sim' para salvar dados -->
+            <button type="button" class="btn btn-success" onclick="saveData()">Sim</button>
+            <!-- Botão 'Não' para cancelar -->
+            <button type="button" class="btn btn-danger" onclick="hideSaveConfirmation()">Não</button>
+        </div>
+    </div>
+
+    
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar-bg fixed-bottom">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 50px;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/home.png'%}" alt="home" style="width: 50px; height: 60px; display: flex; justify-content: center; align-items: center;">
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 50px;">
+                        <a class="nav-link p-1" href="#">
+                            <img src="{% static 'img/portaria-icon.png'%}" alt="icon portaria" style="width: 70px; height: 80px;">
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 50px;">
+                        <a class="nav-link p-1" href="#">
+                            <img src="{% static 'img/registrar entrada saida.png'%}" alt="carro/cancela" style="width: 70px; height: 70px;">
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 50px;">
+                        <a class="nav-link" href="#">
+                            <div style="background-color: white; border-radius: 50%; padding: 5px; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center;">
+                                <img src="{% static 'img/registros.png'%}" alt="tabela" style="width: 50px; height: 60px;">
+                            </div>
+                        </a>
+
+                        <li class="nav-item" style="margin-right: 50px;">
+                            <a class="nav-link" href="#">
+                                <img src="{% static 'img/cadastrar veiculos.png'%}" alt="tabela" style="width: 55px; height: 60px;">
+                            </a>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Adiciona classe 'active' ao clicar em um item do dropdown
+        $('.dropdown-item').click(function() {
+            $('.dropdown-item').removeClass('active'); // Remove a classe 'active' de todos os itens
+            $(this).addClass('active'); // Adiciona a classe 'active' ao item clicado
+        });
+    </script>
+    <script>
+        // Função para exibir a mensagem de confirmação de exclusão
+        function showDeleteConfirmation() {
+            $('#deleteConfirmationMessage').show(); // Exibe a mensagem de confirmação de exclusão
+        }
+    
+        // Função para ocultar a mensagem de confirmação de exclusão
+        function hideDeleteConfirmation() {
+            $('#deleteConfirmationMessage').hide(); // Oculta a mensagem de confirmação de exclusão
+        }
+    
+        // Função para excluir os dados
+        function deleteData() {
+            alert("Dados excluídos!"); // Exibe um alerta com a mensagem "Dados excluídos!"
+            hideDeleteConfirmation(); // Oculta a mensagem de confirmação de exclusão após excluir os dados
+        }
+    
+        // Função para exibir a mensagem de confirmação de salvar
+        function showSaveConfirmation() {
+            $('#saveConfirmationMessage').show(); // Exibe a mensagem de confirmação de salvar
+        }
+    
+        // Função para ocultar a mensagem de confirmação de salvar
+        function hideSaveConfirmation() {
+            $('#saveConfirmationMessage').hide(); // Oculta a mensagem de confirmação de salvar
+        }
+    
+        // Função para salvar os dados
+        function saveData() {
+            alert("Dados salvos!"); // Exibe um alerta com a mensagem "Dados salvos!"
+            hideSaveConfirmation(); // Oculta a mensagem de confirmação de salvar após salvar os dados
+        }
+    </script>
+    <script>
+        function updateSelectedOption(option) {
+            document.getElementById('selectedOption').innerText = option;
+        }
+    </script>
+    <script>
+        // Função para verificar se a barra de navegação está visível
+        function isNavBarVisible() {
+            var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+            var rect = navBar.getBoundingClientRect();
+            return (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+        }
+
+        // Função para ajustar a posição do botão "Salvar"
+        function adjustSaveButtonPosition() {
+            var saveButton = document.querySelector('.custom-navbar-bg-btn');
+            var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+            
+            if (isNavBarVisible()) {
+                // Se a barra de navegação estiver visível, ajusta a margem superior do botão "Salvar"
+                var navBarHeight = navBar.offsetHeight;
+                saveButton.style.marginBottom = navBarHeight + 'px';
+            } else {
+                // Se a barra de navegação estiver oculta, mantém a margem inferior padrão
+                saveButton.style.marginBottom = '0';
+            }
+            }
+
+            // Evento de rolagem da janela
+            window.addEventListener('scroll', function() {
+                adjustSaveButtonPosition();
+            });
+
+            // Ajusta a posição inicial do botão "Salvar" ao carregar a página
+            window.addEventListener('load', function() {
+                adjustSaveButtonPosition();
+            });
+    </script>
+    <script>
+        function adjustSaveButtonPosition() {
+            var saveButton = document.querySelector('.custom-navbar-bg-btn');
+            var navBar = document.querySelector('.custom-navbar-bg.fixed-bottom');
+            
+            if (isNavBarVisible()) {
+                // Se a barra de navegação estiver visível, ajusta a margem inferior do botão "Salvar"
+                var navBarHeight = navBar.offsetHeight;
+                var spaceBetween = 100; // Espaço desejado entre o botão e a barra de navegação
+                saveButton.style.marginBottom = (navBarHeight + spaceBetween) + 'px';
+            } else {
+                // Se a barra de navegação estiver oculta, mantém a margem inferior padrão
+                saveButton.style.marginBottom = '0';
+            }
+        }
+    </script>
+
+    <script>
+        function changeDropdownText(text) {
+            document.getElementById('dropdownText').textContent = text;
+        }
+    </script>
+
+    
+   
+  
+
+    
+   
+
+</body>
+</html>

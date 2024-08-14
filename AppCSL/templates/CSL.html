@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFtech.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+
+
+
+<body>
+
+
+    <header class="header_principal custom-navbar-bg text-black py-3 text-center -bold">
+        <div class="container mb-0">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-2 col-md-1 text-center">
+                    <a href="{% url 'login-CSL' %}">
+                        <img src="{% static 'img/seta.png' %}" alt="voltar" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-10 col-md-11">
+                    <h1 class="title text-center font-weight-bold">CSL</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+            <div class="col-md-8 col-lg-6">
+                <div class="d-flex flex-column align-items-center">
+                    <a href="{% url 'cadastrar_veículos' %}"  class="btn btn-custom-navbar-bg custom-navbar-bg-btn mb-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{% static 'img/cadastrar veiculos.png' %}" width="50px" height="50px" alt="carro" class="mr-3">
+                            <span class="font-weight-bold" style="font-size: 18px;">Cadastro de veículos</span>
+                        </div>
+                    </a>
+    
+                    <a href="{% url 'cadastro_usuários' %}" class="btn btn-custom-navbar-bg custom-navbar-bg-btn mb-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{% static 'img/cadastrar usuario.png' %}" width="55px" height="55px" alt="usuário" class="mr-3">
+                            <span class="font-weight-bold" style="font-size: 18px;">Cadastro de usuários</span>
+                        </div>
+                    </a>
+    
+                    <a href="{% url 'autorizar_veiculos' %}" class="btn btn-custom-navbar-bg custom-navbar-bg-btn mb-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{% static 'img/autorização de veiculo.png' %}" width="65px" height="55px" alt="Veículo" class="mr-3">
+                            <span class="font-weight-bold" style="font-size: 18px;">Autorização de veículos</span>
+                        </div>
+                    </a>
+    
+                    <a href="{% url 'registros_csl' %}" class="btn btn-custom-navbar-bg custom-navbar-bg-btn mb-5">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{% static 'img/registros.png' %}" width="50px" height="50px" alt="registros" class="mr-3">
+                            <span class="font-weight-bold" style="font-size: 18px;">Registros diários</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="spacer"></div>
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar-bg fixed-bottom" style="overflow-x: auto;">
+        <div class="container-fluid">
+            <!-- Itens da barra de navegação -->
+            <div class="collapse navbar-collapse justify-content-center flex-nowrap" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/home.png' %}" alt="home" style="width: 55px; height: 55px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                            <div style="margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                                <div style="background-color: white; border-radius: 50%; padding: 5px; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{% static 'img/csl-icon.png' %}" alt="icon CSL" style="width: 50px;">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item" style="margin-right: 10px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/cadastrar veiculos.png' %}" alt="carro" style="width: 60px; height: 50px; ">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-right: 5px; display: flex; justify-content: center; align-items: center;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/cadastrar usuario.png' %}" alt="usuário" style="width: 70px; height: 50px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-right: 10px;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/autorização de veiculo.png' %}" alt="autorização" style="width: 80px; height: 70px;">
+                        </a>
+                    </li>
+
+                    <li class="nav-item" style="display: flex; justify-content: center; align-items: center; margin-right: 10px;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/registros.png' %}" alt="tabela" style="width: 60px; height: 70px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+  
+  
+  
+
+  
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
